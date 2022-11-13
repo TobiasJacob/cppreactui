@@ -33,3 +33,5 @@
 
 build
 ice
+node_modules
+.DS_Store

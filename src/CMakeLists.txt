@@ -11,5 +11,9 @@ find_package(Ice REQUIRED Ice)
 
 include_directories("${Ice_INCLUDE_DIRS}")
 include_directories(ice)
+
 add_executable(Demo main.cpp ice/Printer.cpp)
 target_link_libraries(Demo Ice++11)
+
+add_executable(Client Client.cpp ice/Printer.cpp)
+target_link_libraries(Client Ice++11)

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ice/3.7.80/Ice.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script type="text/javascript" src="ice/Printer.js"></script>
+        <script type="text/javascript" src="Client.js"></script>
+    </head>
+    
+    <body>
+        <section role="main" id="body">
+            <div class="row">
+                <div class="large-12 medium-12 columns">
+                    <form>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <a href="#" class="button small" id="print">Print String</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <textarea id="output" readonly></textarea>
+                            </div>
+                        </div>
+                        <div id="progress" class="row hide">
+                            <div class="small-12 columns left">
+                                <div class="inline left icon"></div>
+                                <div class="text">Sending Request...</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

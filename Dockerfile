@@ -1,5 +1,5 @@
 # docker build -t cppreactuidev .
-# docker run --rm -it -v ${PWD}:/workdir cppreactuidev /bin/bash
+# docker run --rm -it -v ${PWD}:/workdir -p 0.0.0.0:10000:10000 --net=host cppreactuidev /bin/bash
 
 FROM ubuntu:22.04
 
@@ -33,3 +33,5 @@ RUN mkdir -p /etc/ap/keyrings \
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     libzeroc-ice-dev libzeroc-ice3.7
 
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
+    npm

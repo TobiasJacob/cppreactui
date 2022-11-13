@@ -23,8 +23,9 @@ main(int argc, char* argv[])
 {
     try
     {
+        cout << "Init" << endl;
         Ice::CommunicatorHolder ich(argc, argv);
-        auto adapter = ich->createObjectAdapterWithEndpoints("SimplePrinterAdapter", "default -p 10000");
+        auto adapter = ich->createObjectAdapterWithEndpoints("SimplePrinterAdapter", "ws -h 0.0.0.0 -p 10000");
         auto servant = make_shared<PrinterI>();
         adapter->add(servant, Ice::stringToIdentity("SimplePrinter"));
         adapter->activate();

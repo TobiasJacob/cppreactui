@@ -6,4 +6,7 @@ Simple demo on how to combine react with c++
 ```console
 mkdir src/ice
 slice2cpp Printer.ice --output-dir src/ice
+
+mkdir website/ice
+slice2js Printer.ice --output-dir website/ice
 ```

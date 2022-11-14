@@ -35,3 +35,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     npm
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
+    libboost-all-dev
+

@@ -10,12 +10,19 @@ class PrinterI : public Printer
 {
 public:
     virtual void printString(string s, const Ice::Current&) override;
+    virtual string sendMeAText(const Ice::Current&) override;
 };
  
 void 
 PrinterI::printString(string s, const Ice::Current&)
 {
     cout << s << endl;
+}
+
+string 
+PrinterI::sendMeAText(const Ice::Current&)
+{
+    return "Simple text from cpp";
 }
  
 int

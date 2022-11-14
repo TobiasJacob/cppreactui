@@ -10,6 +10,8 @@ docker run --rm -it -v ${PWD}:/workdir -p 10000:10000 -p 3000:3000 --net=host cp
 
 ## Build instructions
 
+Setup
+
 ```console
 mkdir src/ice
 slice2cpp Printer.ice --output-dir src/ice
@@ -30,6 +32,22 @@ slice2js Printer.ice --output-dir react-app/src/ice --typescript
 
 cd react-app
 npm install
-npm start
+```
 
+Run the server
+
+```console
+./src/build/Demo
+```
+
+In a second terminal run the webapp
+
+```console
+npm start
+```
+
+To get a static html website
+
+```console
+npm build
 ```

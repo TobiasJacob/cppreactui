@@ -1,4 +1,6 @@
 import "ice/lib/Ice";
+import "./ice/Printer";
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';

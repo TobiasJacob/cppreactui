@@ -6,7 +6,9 @@ function App() {
 
   return (
     <div className="App">
-      <DemoWidget />
+      <LocalCommunicator>
+        <DemoWidget />
+      </LocalCommunicator>
     </div>
   );
 }

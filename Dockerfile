@@ -1,5 +1,3 @@
-# docker build -t cppreactuidev .
-# docker run --rm -it -v ${PWD}:/workdir -p 0.0.0.0:10000:10000 --net=host cppreactuidev /bin/bash
 
 FROM ubuntu:22.04
 
@@ -7,9 +5,6 @@ RUN apt update
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     clang-12
-
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    nodejs
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     cmake
@@ -34,8 +29,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     libzeroc-ice-dev libzeroc-ice3.7
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    npm
-
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     libboost-all-dev
 
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
+    nodejs

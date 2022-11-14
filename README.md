@@ -14,8 +14,8 @@ docker run --rm -it -v ${PWD}:/workdir -p 10000:10000 -p 3000:3000 --net=host cp
 mkdir src/ice
 slice2cpp Printer.ice --output-dir src/ice
 
-mkdir website/ice
-slice2js Printer.ice --output-dir website/ice
+mkdir standalonewebsite/ice
+slice2js Printer.ice --output-dir standalonewebsite/ice
 
 
 mkdir src/build
